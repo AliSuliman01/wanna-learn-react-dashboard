@@ -1,37 +1,52 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .App {
   text-align: center;
 }
-.background {
+.background-img {
   background-image: url("./resources/prototype/pt_home_bg.png");
-  background-color: #f8f8f8;
-  background-position: 90%;
+  background-color: #ffffff;
+  background-position: 100%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .max-height {
   height: 100vh;
 }
-
+.max-width {
+  width: 100%;
+}
 .login-form {
-  width: 60vh;
+  background-color: rgba(242, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  /* box-shadow: 0px 0px 5px 1px #2f2e41; */
+  width: 70vh;
   padding: 7vh;
   display: flex;
   flex-direction: column;
   height: 40vh;
   justify-content: space-between;
   align-items: center;
-  border: #777 1px solid;
+  /* border: #ccc 1px solid; */
   border-radius: 5vh;
   margin-top: 20vh;
-  margin-left: 10vh;
+  margin-left: 8vh;
 }
 
 .btn-login {
   background-color: white;
   width: 50%;
+}
+.btn-login:focus {
+  box-shadow: none;
+}
+.btn-login:active {
+  background-color: #ccc;
+  width: 45%;
+  transition: width 0.2s ease-in-out;
 }
 .title {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -39,4 +54,85 @@
   width: min-content;
   padding-top: 12vh;
   padding-left: 15vh;
+}
+.custom-form-input {
+  background-color: transparent;
+  border: transparent;
+  border-bottom: #777 1px solid;
+  border-radius: 0px;
+  outline: 0px;
+}
+.custom-form-input:focus {
+  box-shadow: 0px;
+  background-color: transparent;
+  box-shadow: 0px 2px 1px 0px #ccc;
+  border-bottom: #777 1px solid;
+  border-radius: 0px;
+}
+
+.side-navbar {
+  background-color: #f1f1f1;
+  border-top-right-radius: 5vh;
+  border-bottom-right-radius: 5vh;
+  padding: 10vh 4rem;
+  text-align: start;
+  z-index: 2;
+}
+
+.side-navbar .nav-item {
+  padding: 2vh;
+  cursor: pointer;
+}
+.search-box {
+  background-color: white;
+  z-index: 1;
+}
+
+.search-box input {
+  background-color: white;
+  z-index: 1;
+}
+
+a {
+  color: #888;
+  text-decoration-line: none;
+}
+
+a:hover {
+  color: #61dafb;
+}
+.App-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.App-logo {
+  width: 6rem;
+}
+.App-nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.App-nav li {
+  padding-right: 3rem;
+  list-style-type: none;
+  font-weight: bold;
+}
+.active a {
+  color: #61dafb;
+}
+.Materials-content {
+  display: flex;
+  padding: 3rem;
+}
+.Materials-sidebare {
+  width: 25%;
+}
+.Materials-sidebare ul {
+  list-style-type: none;
+  padding: 0;
+}
+.Materials-sidebare ul li {
+  margin-bottom: 1rem;
 }
